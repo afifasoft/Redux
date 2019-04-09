@@ -10,8 +10,17 @@ var stateDefault = {
 
 var reducer = (state = stateDefault, action) => {
 
-  return state;
-  
+  switch(action.type) {
+    case 'CHANGE_SEARCH_TEXT' :
+      return {
+          ...state,
+          searchText: action.searchText
+
+      }
+
+    default:
+      return state;
+  }
 }
 
 
@@ -20,3 +29,13 @@ var store = redux.createStore(reducer);
 var currentState = store.getState();
 
 console.log('currentState', currentState);
+
+var action = {
+  type: 'CHANGE_SEARCH_TEXT',
+  searchText: 'Eat'
+
+};
+
+store.dispatch(action);
+
+console.log('searchText', store.getState());

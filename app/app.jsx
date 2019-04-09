@@ -17,5 +17,5 @@ require('style!css!sass!applicationStyles')
     document.getElementById('app')
   );
 
-//  require('./redux-example.jsx');
-  require('./redux-mytask.jsx');
+// require('./redux-example.jsx');
+ require('./redux-mytask.jsx');
