@@ -12,10 +12,10 @@ $(document).foundation();
 require('style!css!sass!applicationStyles')
 
 
-  ReactDOM.render(
-    <p>React Boiler Plate 3</p>,
-    document.getElementById('app')
-  );
+//  ReactDOM.render(
+//    <p>React Boiler Plate 3</p>,
+//    document.getElementById('app')
+//  );
 
-// require('./redux-example.jsx');
+ //require('./redux-example.jsx');
  require('./redux-mytask.jsx');
