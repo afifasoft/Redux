@@ -1,5 +1,4 @@
-// Name reducer and action generators
-// --------------------
+
 export var nameReducer = (state = 'Anonymous', action) => {
   switch (action.type) {
     case 'CHANGE_NAME':
@@ -12,10 +11,8 @@ export var nameReducer = (state = 'Anonymous', action) => {
 };
 
 
-// Hobbies reducer and action generators
-// --------------------
-export var nextHobbyId = 1;
-var hobbiesReducer = (state = [], action) => {
+var nextHobbyId = 1;
+export var hobbiesReducer = (state = [], action) => {
   switch (action.type) {
     case 'ADD_HOBBY':
       return [
@@ -34,11 +31,6 @@ var hobbiesReducer = (state = [], action) => {
   }
 };
 
-
-
-
-// Movies reducer and action generators
-// --------------------
 var nextMoiveId = 1;
 export var moviesReducer = (state = [], action) => {
   switch (action.type) {
@@ -61,9 +53,6 @@ export var moviesReducer = (state = [], action) => {
 };
 
 
-
-// Map reducer and action generators
-// --------------------
 export var mapReducer = (state = {isFetching: false, url: undefined}, action) => {
   switch (action.type) {
     case 'START_LOCATION_FETCH':

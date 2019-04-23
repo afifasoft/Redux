@@ -1,6 +1,4 @@
 var redux = require('redux');
-var axios = require('axios');
-
 
 console.log('Starting redux example');
 
@@ -12,64 +10,6 @@ var stateDefault = {
   hobbies: [],
   movies: []
 };
-
-var oldReducer = (state = stateDefault, action) => {
-//  state = state || {name : 'Anonymous'};
-
-
-  switch(action.type) {
-    case 'CHANGE_NAME' :
-      return {
-        ...state,
-        name: action.name
-      };
-
-    case 'ADD_HOBBY' :
-      return {
-        ...state,
-        hobbies: [
-          ...state.hobbies,
-          {
-            id: nextHobbyId++,
-            hobby: action.hobby
-          }
-        ]
-      };
-
-    case 'REMOVE_HOBBY' :
-      return {
-        ...state,
-        hobbies: state.hobbies.filter((hobby) => hobby.id !== action.id) // one statement returns
-      };
-
-    case 'ADD_MOVIE' :
-      return {
-          ...state,
-          movie: [
-            ...state.movies,
-            {
-              id: nextMoiveId++,
-              title: action.title,
-              genre: action.genre
-            }
-          ]
-      };
-    case 'REMOVE_MOVIE' :
-      return {
-        ...state,
-        movie: state.movies.filter((movie) => movie.id !== action.id)
-      };
-
-
-    default:
-      return state;
-  }
-
-};
-
-
-
-
 
 // Subscribe to changes
 var unsubscribe = store.subscribe(() => {
@@ -91,7 +31,7 @@ var unsubscribe = store.subscribe(() => {
 var currentState = store.getState();
 console.log('currentState', currentState);
 
-actions.fetchLocation();
+store.dispatch(actions.fetchLocation());
 
 store.dispatch(actions.changeName('Atif'));
 
