@@ -2,7 +2,7 @@ var axios = require('axios');
 export var changeName = (name) => {
   return {
     type: 'CHANGE_NAME',
-    name  
+    name
   }
 };
 
@@ -53,6 +53,7 @@ export var fetchLocation = () => {
     dispatch(startLocationFetch());
 
     axios.get('http://ipinfo.io').then(function (res) {
+      consol.log(res.data);
       var loc = res.data.loc;
       var baseUrl = 'http://maps.google.com?q=';
 
