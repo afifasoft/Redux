@@ -34,7 +34,7 @@
     "expect": "^1.14.0",
     "foundation-sites": "^6.2.0",
     "jquery": "^2.2.1",
-    "node-sass": "^4.9.3",
+    "node-sass": "^4.13.1",
     "react-addons-test-utils": "^0.14.7",
     "redux-devtools": "^3.5.0",
     "redux-thunk": "^2.3.0",
